@@ -19,15 +19,15 @@ export const Character = () => {
   return (
     <div className="col-md-12">
       <div className="text-center card card-body p-5">
-        <h3>{onlyCharacter.name}</h3>
-        <p>Height: {onlyCharacter.height} cm.</p>
-        <p>Mass: {onlyCharacter.mass} KG.</p>
-        <p>Hair color: {onlyCharacter.hair_color}</p>
-        <p>Skin color: {onlyCharacter.skin_color}</p>
-        <p>Eye color: {onlyCharacter.eye_color}</p>
-        <p>Birth year: {onlyCharacter.birth_year}</p>
-        <p>Gender: {onlyCharacter.gender}</p>
-        {favoritesChecker(onlyCharacter.url) ? (
+        <h3>{onlyCharacter?.name}</h3>
+        <p>Height: {onlyCharacter?.height} cm.</p>
+        <p>Mass: {onlyCharacter?.mass} KG.</p>
+        <p>Hair color: {onlyCharacter?.hair_color}</p>
+        <p>Skin color: {onlyCharacter?.skin_color}</p>
+        <p>Eye color: {onlyCharacter?.eye_color}</p>
+        <p>Birth year: {onlyCharacter?.birth_year}</p>
+        <p>Gender: {onlyCharacter?.gender}</p>
+        {favoritesChecker(onlyCharacter?.url) ? (
           <button
             className={"btn btn-danger"}
             onClick={() => deleteFavorites(onlyCharacter)}

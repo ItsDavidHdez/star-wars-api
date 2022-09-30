@@ -24,7 +24,7 @@ export const Home = () => {
     <div className="container">
       <h1>Home</h1>
       <div className="row">
-        {character.map((character, key) => (
+        {character?.map((character, key) => (
           <Characters
             key={key}
             character={character}

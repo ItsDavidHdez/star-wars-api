@@ -15,12 +15,12 @@ export const Characters = ({ character, addToFavorite }) => {
           to={`/character/${getId}`}
           className="text-black text-decoration-none"
         >
-          <h3>{character.name}</h3>
-          <p>Height: {character.height} cm.</p>
-          <p>Mass: {character.mass} KG</p>
-          <p>Birth year: {character.birth_year}</p>
+          <h3>{character?.name}</h3>
+          <p>Height: {character?.height} cm.</p>
+          <p>Mass: {character?.mass} KG</p>
+          <p>Birth year: {character?.birth_year}</p>
         </Link>
-        {favoritesChecker(character.url) ? (
+        {favoritesChecker(character?.url) ? (
           <button
             className={"btn btn-danger"}
             onClick={() => deleteFavorites(character)}

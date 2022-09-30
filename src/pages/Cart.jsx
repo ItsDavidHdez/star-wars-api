@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import { useConsumeContext } from "../hooks/useConsumeContext";
 
 export const Cart = () => {
-  const { deleteFavorites, setFavorites } = useConsumeContext();
+  const { deleteFavorites, setFavorites, NAME_LOCALSTORAGE } =
+    useConsumeContext();
 
-  const newFavorites = localStorage.getItem("favorites");
+  const newFavorites = localStorage.getItem(NAME_LOCALSTORAGE);
 
   useEffect(() => {
-    const data = localStorage.getItem("favorites");
+    const data = localStorage.getItem(NAME_LOCALSTORAGE);
     if (data) {
       setFavorites(JSON.parse(data));
     }
@@ -17,7 +18,12 @@ export const Cart = () => {
     <div className="container">
       <div className="row">
         {JSON.parse(newFavorites).map((character) => (
-          <div className="col-md-4" key={character.url}>
+          <div
+            className={`col-md-${
+              JSON.parse(newFavorites).length <= 3 ? "12" : "4"
+            }`}
+            key={character.url}
+          >
             <div className="text-center card card-body p-5">
               <h3>{character.name}</h3>
               <p>Height: {character.height} cm.</p>

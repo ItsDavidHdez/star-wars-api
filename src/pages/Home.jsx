@@ -3,8 +3,7 @@ import { useConsumeContext } from "../hooks/useConsumeContext";
 import { Characters } from "../components/Characters";
 
 export const Home = () => {
-  const { character, getPeopleData, addToFavorite, deleteFavorites } =
-    useConsumeContext();
+  const { character, getPeopleData, addToFavorite } = useConsumeContext();
 
   const handleScroll = (e) => {
     if (

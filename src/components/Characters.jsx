@@ -11,7 +11,10 @@ export const Characters = ({ character, addToFavorite }) => {
   return (
     <div className="col-md-4">
       <div className="text-center card card-body p-5">
-        <Link to={`/character/${getId}`}>
+        <Link
+          to={`/character/${getId}`}
+          className="text-black text-decoration-none"
+        >
           <h3>{character.name}</h3>
           <p>Height: {character.height} cm.</p>
           <p>Mass: {character.mass} KG</p>

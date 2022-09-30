@@ -48,7 +48,7 @@ export const CharacterContextProvider = ({ children }) => {
 
   const favoritesChecker = (url) => {
     const transcitionObj = JSON.parse(localStorage.getItem(NAME_LOCALSTORAGE));
-    const matches = transcitionObj.some((character) => character.url === url);
+    const matches = transcitionObj?.some((character) => character.url === url);
     return matches;
   };
 
